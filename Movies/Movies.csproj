@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{610011D0-C63D-45CC-BE20-C9D5BFB56945}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Movies</RootNamespace>
+    <AssemblyName>Movies</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Movies.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="loginpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginpage.designer.cs">
+      <DependentUpon>loginpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainpage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainpage.designer.cs">
+      <DependentUpon>mainpage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="moviedbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moviedbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="movies_search_display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="movies_search_display.designer.cs">
+      <DependentUpon>movies_search_display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movie_HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movie_HomePage.designer.cs">
+      <DependentUpon>Movie_HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewForm.Designer.cs">
+      <DependentUpon>ReviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchResult.Designer.cs">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowTimeAndDatePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTimeAndDatePanel.designer.cs">
+      <DependentUpon>ShowTimeAndDatePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserHomepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserHomepage.designer.cs">
+      <DependentUpon>UserHomepage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="loginpage.resx">
+      <DependentUpon>loginpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainpage.resx">
+      <DependentUpon>mainpage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movies_search_display.resx">
+      <DependentUpon>movies_search_display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movie_HomePage.resx">
+      <DependentUpon>Movie_HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewForm.resx">
+      <DependentUpon>ReviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SearchResult.resx">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowTimeAndDatePanel.resx">
+      <DependentUpon>ShowTimeAndDatePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserHomepage.resx">
+      <DependentUpon>UserHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="moviedbDataSet.xsc">
+      <DependentUpon>moviedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="moviedbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>moviedbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="moviedbDataSet.xss">
+      <DependentUpon>moviedbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
